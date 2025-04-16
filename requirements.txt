@@ -6,3 +6,5 @@ instructor[groq]
 fastapi[standard]
 uvicorn
 jinja2
+instructor
+langchain-groq
