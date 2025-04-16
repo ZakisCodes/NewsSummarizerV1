@@ -1,0 +1,8 @@
+pydantic
+groq
+fastapi
+python-dotenv
+instructor[groq]
+fastapi[standard]
+uvicorn
+jinja2

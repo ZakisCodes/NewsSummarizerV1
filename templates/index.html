@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form</title>
+  <link rel="stylesheet" href="{{url_for('static', path ='css/style1.css')}}">
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="form-title">Ready to Summarize?</h1>
+    <form id="message-form">
+      <div class="form-group">
+        <textarea placeholder="Type your message here..." required id="InputText"></textarea>
+      </div>
+      <button onclick="SendNews(event)">Summarize</button>
+    </form>
+  </div>
+  <!--Css Loading-->
+  <div class="loader-container">
+    <div class="loader">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+    </div>
+    
+    <div class="status-text">PROCESSING DATA</div>
+</div>
+  
+  <script src="{{url_for('static',path='js/script1.js')}}"></script>
+</body>
+</html>
