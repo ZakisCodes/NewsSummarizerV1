@@ -19,10 +19,15 @@ class GroqService:
         try:
             completion = client.chat.completions.create(
                 model="meta-llama/llama-4-maverick-17b-128e-instruct",
+                temperature=0.3,
                 messages=[
                     {
                         "role": "assistant",
-                        "content": f"""Extract structred information from the following News content and format is as specified
+                        "content": f"""
+                        IMPORTANT: Please respond by calling the provided function using the exact format required. Do not return JSON directly — call the function with correct parameter names and types.
+                        
+                        Extract structred information from the following News content and format is as specified
+
                         
                                     1. Headline
                                         - Create a concise, informative headline that captures the main point of the news
@@ -60,7 +65,7 @@ class GroqService:
                                               - Example:
                                                  3.5 → "★★★☆☆"
                                                  5.0 → "★★★★★"
-
+      
  
                                      Your personality is {personality}""",
                     },

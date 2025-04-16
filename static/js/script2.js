@@ -11,7 +11,6 @@ window.addEventListener("DOMContentLoaded", async ()=>{
   const response = sessionStorage.getItem("response");
   const Text = sessionStorage.getItem("newsText1");
   if (response){
-    console.log(Text);
     const data = await JSON.parse(response);
     document.querySelector(".headline").innerText = data.Headline;
     document.querySelector(".topic-tag").innerText = data.Topic;
