@@ -49,12 +49,19 @@ class GroqService:
                                              1. The first paragraph concisely summarizes the main news: GreenGrid Energy is launching a $15 million project in Nepal to electrify 25 remote villages using solar microgrids, with an expected completion by mid-2026.
                                              2. The second paragraph adds context and significance: The project aligns with Nepal's goal for universal electricity access by 2030, has the potential to reduce diesel reliance, and could be a model for other regions.
                                     4. Readability
-                                        - Score on scale of 1.0 to 5.0 (with onw decimal place)
+                                        - Score on scale of 1.0 to 5.0 (with one decimal place)
                                         - Format as [score] / 5.0 (eg: 4.5 / 5.0)
                                     5. Star
-                                        - Visual representation: Convert Readability Score to stars (★ for each full point, ☆ for half point
-                                        - Example: 3.5 = ★★★☆☆
-                                     
+                                        - Visual representation: Convert Readability Score to stars.
+                                        - Return a visual rating as Unicode stars:
+                                            - Use ★ for each full point
+                                            - Use ☆ for each half point
+                                            Always return a total of 5 characters
+                                              - Example:
+                                                 3.5 → "★★★☆☆"
+                                                 5.0 → "★★★★★"
+
+ 
                                      Your personality is {personality}""",
                     },
                     {"role": "user", "content": Input.news},
