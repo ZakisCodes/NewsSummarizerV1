@@ -33,3 +33,7 @@ Thumbs.db
 
 # Other IDE configs
 .idea/
+
+
+# Local Readme file 
+README-local.md
